@@ -1,0 +1,100 @@
+<div [class.has-detached-left]="showFiltersCard">
+
+  <div id="filtersCard" *ngIf="showFiltersCard" class="sidebar-detached">
+    <div class="sidebar sidebar-default">
+      <div class="sidebar-content">
+
+        <div class="sidebar-category">
+          <div class="category-title">
+            <span>Filtros de pesquisa</span>
+            <ul class="icons-list">
+              <li><a (click)="closeFiltersCard()" data-action="close"></a></li>
+            </ul>
+          </div>
+
+          <div class="category-content">
+              <ng-content></ng-content>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-detached">
+    <div class="content-detached">
+      <div id="listCard" class="panel panel-flat">
+        <div class="panel-heading">
+          <h5 class="panel-title"><span class="text-bold">Operadoras</span><a class="heading-elements-toggle"><i class="icon-more"></i></a></h5>
+          <div class="heading-elements">
+            <ul class="icons-list">
+              <li>
+                <div class="form-group has-feedback has-feedback-left">
+                  <input type="text" class="form-control" placeholder="Procurar no grid">
+                  <div class="form-control-feedback">
+                    <i class="icon-search4 text-size-base"></i>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="form-group form-group-material">
+                  <select class="form-control">
+                    <option value="25">Mostrar 25</option>
+                    <option value="50" selected="selected">Mostrar 50</option>
+                    <option value="100">Mostrar 100</option>
+                    <option value="250">Mostrar 250</option>
+                    <option value="500">Mostrar 500</option>
+                    <option value="1000">Mostrar 1000</option>
+                  </select>
+                </div>
+
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Username</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td>Eugene</td>
+              <td>Kopyov</td>
+              <td>@Kopyov</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Victoria</td>
+              <td>Baker</td>
+              <td>@Vicky</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>James</td>
+              <td>Alexander</td>
+              <td>@Alex</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Franklin</td>
+              <td>Morrison</td>
+              <td>@Frank</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

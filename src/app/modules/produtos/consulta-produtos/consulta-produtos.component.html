@@ -1,0 +1,45 @@
+<form (ngSubmit)="onSubmit()" #produtosForm="ngForm">
+
+<div class="page-header page-header-default">
+  <div class="page-header-content">
+    <div class="page-title">
+      <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Produtos</span> - Consulta</h4>
+      <a class="heading-elements-toggle"><i class="icon-more"></i></a>
+    </div>
+
+    <div class="heading-elements">
+      <div class="heading-btn-group">
+        <a (click)="toggleShowFiltersCard()" class="btn btn-link btn-float has-text"><i class="icon-filter3 text-primary"></i><span>Filtros</span></a>
+        <button type="submit"  class="btn btn-link btn-float has-text" (click)="pesquisar(); produtosForm.reset()"><i class="icon-search4 text-primary"></i> <span>Pesquisar</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="breadcrumb-line"><a class="breadcrumb-elements-toggle"><i class="icon-menu-open"></i></a>
+    <ul class="breadcrumb">
+      <li><a routerLink="/"><i class="icon-home2 position-left"></i> Home</a></li>
+      <li><a routerLink="/operadoras">Produtos</a></li>
+      <li class="active">Consulta</li>
+    </ul>
+
+  </div>
+</div>
+
+
+<div class="content">
+
+  <consulta-grid>
+    <div class="form-group">
+      <label>Nome:</label>
+      <input type="text" class="form-control" placeholder="Nome do produto" id="nome" [(ngModel)]="filter.name" name="name" #spy>
+    </div>
+
+    <div class="form-group">
+      <label>Tipo de Contratação:</label>
+      <input type="text" class="form-control" placeholder="Tipo de contratação do produto" id="tipoContratacao" [(ngModel)]="filter.contractType" name="contractType">
+    </div>
+  </consulta-grid>
+
+</div>
+
+</form>

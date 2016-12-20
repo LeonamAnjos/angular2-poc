@@ -1,0 +1,159 @@
+<div class="page-header page-header-default">
+  <div class="page-header-content">
+    <div class="page-title">
+      <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Operadoras</span> - Consulta</h4>
+      <a class="heading-elements-toggle"><i class="icon-more"></i></a></div>
+
+    <div class="heading-elements">
+      <div class="heading-btn-group">
+        <a (click)="toggleFilterCard()" class="btn btn-link btn-float has-text"><i class="icon-filter3 text-primary"></i><span>Filtros</span></a>
+        <a href="#" class="btn btn-link btn-float has-text"><i class="icon-search4 text-primary"></i> <span>Pesquisar</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="breadcrumb-line"><a class="breadcrumb-elements-toggle"><i class="icon-menu-open"></i></a>
+    <ul class="breadcrumb">
+      <li><a routerLink="/"><i class="icon-home2 position-left"></i> Home</a></li>
+      <li><a routerLink="/operadoras">Operadoras</a></li>
+      <li class="active">Consulta</li>
+    </ul>
+
+  </div>
+</div>
+
+<div class="content">
+
+  <div [class.has-detached-left]="showFilterCard">
+
+    <div id="filterCard" *ngIf="showFilterCard" class="sidebar-detached">
+      <div class="sidebar sidebar-default">
+        <div class="sidebar-content">
+
+          <div class="sidebar-category">
+            <div class="category-title">
+              <span>Search</span>
+              <ul class="icons-list">
+                <li><a href="#" data-action="collapse"></a></li>
+              </ul>
+            </div>
+
+            <div class="category-content">
+              <form action="#">
+                <div class="has-feedback has-feedback-left">
+                  <input type="search" class="form-control" placeholder="Search">
+                  <div class="form-control-feedback">
+                    <i class="icon-search4 text-size-base text-muted"></i>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="sidebar-category">
+            <div class="category-title">
+              <span>Action buttons</span>
+              <ul class="icons-list">
+                <li><a href="#" data-action="collapse"></a></li>
+              </ul>
+            </div>
+
+            <div class="category-content">
+              <div class="row">
+                <div class="col-xs-6">
+                  <button class="btn bg-teal-400 btn-block btn-float btn-float-lg" type="button"><i class="icon-git-branch"></i> <span>Branch</span></button>
+                  <button class="btn bg-purple-300 btn-block btn-float btn-float-lg" type="button"><i class="icon-mail-read"></i> <span>Messages</span></button>
+                </div>
+
+                <div class="col-xs-6">
+                  <button class="btn bg-warning-400 btn-block btn-float btn-float-lg" type="button"><i class="icon-stats-bars"></i> <span>Statistics</span></button>
+                  <button class="btn bg-blue btn-block btn-float btn-float-lg" type="button"><i class="icon-people"></i> <span>Users</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-detached">
+      <div class="content-detached">
+        <div id="listCard" class="panel panel-flat">
+          <div class="panel-heading">
+            <h5 class="panel-title"><span class="text-bold">Operadoras</span><a class="heading-elements-toggle"><i class="icon-more"></i></a></h5>
+            <div class="heading-elements">
+              <ul class="icons-list">
+                <li>
+                  <div class="form-group has-feedback has-feedback-left">
+                    <input type="text" class="form-control" placeholder="Procurar no grid">
+                    <div class="form-control-feedback">
+                      <i class="icon-search4 text-size-base"></i>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="form-group form-group-material">
+                    <select class="form-control">
+                      <option value="25">Mostrar 25</option>
+                      <option value="50" selected="selected">Mostrar 50</option>
+                      <option value="100">Mostrar 100</option>
+                      <option value="250">Mostrar 250</option>
+                      <option value="500">Mostrar 500</option>
+                      <option value="1000">Mostrar 1000</option>
+                    </select>
+                  </div>
+
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td>Eugene</td>
+                <td>Kopyov</td>
+                <td>@Kopyov</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Victoria</td>
+                <td>Baker</td>
+                <td>@Vicky</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>James</td>
+                <td>Alexander</td>
+                <td>@Alex</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Franklin</td>
+                <td>Morrison</td>
+                <td>@Frank</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
